@@ -1,0 +1,30 @@
+{
+  "search.exclude": {
+    "export/**/*.hx": true
+  },
+  "[haxe]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "source.sortImports": "explicit"
+    }
+  },
+  "haxe.enableExtendedIndentation": true,
+  "lime.browser": "edge",
+  "editor.defaultFormatter": "nadako.vshaxe",
+  "prettier.enable": false,
+  "deno.enable": true,
+  "deno.lint": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "typescript.validate.enable": false,
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "cSpell.words": [
+    "flixel"
+  ]
+}

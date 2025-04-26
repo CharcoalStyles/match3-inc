@@ -1,0 +1,97 @@
+# My todo list
+
+Just want a place to keep track of what I want to do next. Might as well make it public.
+
+Also there will be notes, they will be silly as I usually commit changes when it's really late.
+
+- [ ] New particle system
+  - [x] Basic Pooling system
+  - [x] Extended FlxParticle
+  - [x] Extended LERP with steps/stops
+    - Original FlxParticle LERP just wasn't working for me
+    - I've actually stripped out access to the original FlxParticle LERPs. An array with 2 stops at 0 and 1 do the same thing; though I do miss out on easings (for now...)
+  - [x] Emitter function to replace current mana gain effect
+  - [x] Emitter function for health gain
+    - And it's in a script 😉
+  - [x] Emitter function for damage taken
+    - Kind of done, Fireball spell has a particle animation right now, but it isn't a generic "lose health" effect.
+    - Both heal/damage might just be specific to the "spell" that does the effect
+  - [x] Emitter function for gem change (Also a basic explosion)
+    - First pass done and works on main menu on click and the "Light it up!" spell in game
+  - [ ] Add easings to each stop
+    - I think just adding an easing option to a stop and using the esing form the "lowest" stop is the best way to go.
+  - [ ] Add property to change the particle sprite
+    - Having some trouble finding nice sprites for this.
+- [x] Data driven everything that is in the game now
+  - Yes! Rather than adding more actual fun game stuff, I spent time doing silly technical things. 😀
+  - [x] Characters
+    - [x] Characters definition in `Modding.md`
+    - [x] Working (in game) character
+  - [x] Spells
+    - [x] Spells definition in `Modding.md`
+    - [x] Working (in game) spells (All spells that are currently in game!)
+  - [x] Effects
+    - [x] Effects definition in `Modding.md`
+    - [x] Working (in game) effects
+    - This will be ongoing, there's **a lot** of work to do here. But the first full spell is in (Fireball, for the player).
+- [x] Tooltips for spells
+  - [x] Tooltips for spells in game on mouse hover
+- [ ] x-match system
+  - [x] New turn on 4+ match
+  - [x] UI and/or text effect for new turn
+  - [x] Do something on 5+ match (This is done, but needs balancing)
+    - Because of jpw the the mana is added, I had to add 1 mana to each gem, so it quite OP.
+  - [x] Do something on 6+ match?
+    - nah.
+- [x] Battle win/lose system
+  - [x] Add a "win" and "lose" effect to the game
+  - [x] Add a way to easily get back to the main menu 🤣
+- [ ] Change Air to damage
+  - [x] Remove from character mana system
+  - [x] deal damage to other character on match
+  - [ ] Find appropriate developer art for new gem
+- [ ] Next version of enemy "AI"
+  - [x] Add support for using spells
+  - [ ] Rank required mana higher in potential matches pool
+  - [x] Adjust the range for which matches are available for the AI to access to match, to make it more balanced
+- [ ] Setup CI/CD for win/mac/linux/android versions
+  - [ ] Setup GitHub runners on Server and/or MacMini
+  - [ ] Setup GitHub actions
+    - [ ] Build for Windows
+    - [ ] Build for Mac
+      - Actually, just because I might have to use an x86 version of haxe and stuff, it doesn't matter, as building the game with xCode will make it either Arm or universal anyway. Duh.
+    - [ ] Build for Linux
+    - [ ] Build for Android
+- [ ] Add Controller support
+- [ ] New Menu system
+  - [x] Basic menu system
+  - [x] arrow keys to select and enter to activate
+  - [x] mouseover to select and click to activate
+  - [x] Basic animations
+  - [x] Multiple pages
+  - [ ] joypad support
+  - [ ] Number range selection
+  - [ ] Select from array
+  - [ ] more?
+- [ ] Add a real main menu
+  - [x] Add a "New Battle" button to main menu 
+    - [x] add a list of current enemies to choose from
+    - [ ] overhaul the loading system to load on play state init
+      - It does, but only for the enemy. the player still has the single global state.
+  - [ ] Add a "Options" button to menu
+      - I added a toggle for full screen, it's a step.
+  - [ ] Add a "Quit" button to main menu
+- [ ] Add a Pause menu
+  - [x] Add a "Resume" button to pause menu
+  - [x] Add a "Quit" button to pause menu
+  - [ ] Add a "Options" button to pause menu
+- [ ] Add an Options menu
+  - [ ] Add a Full Screen option (Put the stupid basic version on the main menu)
+  - [ ] Add a "Quit"/"Back" button to options menu
+- [ ] Particle system Extensions
+  - [ ] See if there's some refinements for the particle system generation
+    - It's a bit too much to write right now. But also not too bad, I guess.
+    - Also, this might solve it's self when I move spells to data files
+  - [ ] Split out the particle system into a library?
+- [ ] Add Modding library [Polymod](https://polymod.io/)
+  - [ ] Get the demo working in HTML5
